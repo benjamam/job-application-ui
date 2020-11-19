@@ -1,0 +1,10 @@
+<h2>Qualified Applicants</h2>
+<div class="card" *ngFor="let application of acceptedApplications$ | async">
+    <div class="card-body">
+        <h5 class="card-title">{{ application.name }}</h5>
+        <div *ngFor="let question of application.questions">
+            <p>{{ question.question }}</p>
+            <p><i>{{ question.answer }}</i></p>
+        </div>
+    </div>
+</div>
